@@ -21,14 +21,18 @@ This repository contains code and resources for performing **Aspect-Based Sentim
 
 1. Data Cleaning (removal of special characters, links, etc.)
 2. Case Folding (conversion to lowercase)
-3. Tokenization using respective model tokenizer (WordPiece or BPE)
+3. Tokenization using respective model tokenizer
 4. Data Splitting (5-fold cross-validation)
 
 ## 🚀 Model Training
 
 Two models are fine-tuned on the facility aspect dataset:
-- **RoBERTa** with Bayesian Optimization
-- **IndoBERT** with Random Search
+- **RoBERTa** with Bayesian Optimization and Random Search
+- **IndoBERT** with Bayesian Optimization and Random Search
+
+Each model undergoes training using both hyperparameter tuning methods. After training, the **best-performing result** (based on evaluation metrics such as accuracy and F1-score) is selected to represent each model in the final comparison.
+
+This approach ensures that **each model is evaluated under optimal conditions**, providing a fair and comprehensive comparison of their capabilities in analyzing sentiment related to hotel facilities.
 
 ### Evaluation Metrics:
 - Accuracy
